@@ -1,23 +1,40 @@
 <div class="flex align-items-center card justify-content-center">
-  <div class="p-col-10 p-sm-6 p-md-4 ">
+  <div class="p-col-10 p-sm-6 p-md-4">
     <p-card>
       <div class="p-grid">
         <div class="text-center">
-            <i class="fa-solid fa-car fa-4x"></i>
-            <h2>Car Sales</h2>
+          <i class="fa-solid fa-car fa-4x"></i>
+          <h2>Car Sales</h2>
         </div>
         <div class="p-float-label p-col-12">
-          <input id="float-input" type="text" pInputText />
+          <input
+            [(ngModel)]="requestLogin.login"
+            id="float-input"
+            type="text"
+            pInputText
+          />
           <label for="float-input">Usuário</label>
         </div>
         <br />
         <div class="p-float-label">
-          <input id="float-input" type="password" pInputText />
+          <input
+            [(ngModel)]="requestLogin.password"
+            id="float-input"
+            type="password"
+            pInputText
+          />
           <label for="float-input">Senha</label>
         </div>
         <br />
         <div class="text-center">
-          <button pButton type="button" class="p-button-rounded">Entrar</button>
+          <button
+            (click)="doLogin()"
+            pButton
+            type="button"
+            class="p-button-rounded"
+          >
+            Entrar
+          </button>
         </div>
       </div>
     </p-card>
